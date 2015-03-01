@@ -1,26 +1,47 @@
 {
-    "appKeys": {
-        "dummy": 0
-    },
+    "appKeys": {},
     "capabilities": [
         ""
     ],
-    "companyName": "MakeAwesomeHappen",
-    "longName": "WOTD",
+    "companyName": "Pebble",
+    "longName": "Word of the Day",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/Solid_black.png",
+                "name": "BLACK_RECT",
+                "type": "png"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "FONT_PERFECT_DOS_18",
+                "type": "font"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "FONT_PERFECT_DOS_20",
+                "type": "font"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "FONT_PERFECT_DOS_15",
+                "type": "font"
+            },
+            {
+                "compatibility": "2.7",
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "FONT_PERFECT_DOS_25",
+                "type": "font"
+            }
+        ]
     },
-    "sdkVersion": "3",
+    "sdkVersion": "2",
     "shortName": "WOTD",
-    "targetPlatforms": [
-        "aplite",
-        "basalt"
-    ],
-    "uuid": "2d8825ad-faa2-4d61-8368-74e849b28f95",
+    "uuid": "2e588d63-82c5-4e77-9799-59d242e17f7a",
     "versionCode": 1,
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": false
+        "watchface": true
     }
 }

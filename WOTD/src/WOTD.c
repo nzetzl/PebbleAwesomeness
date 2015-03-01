@@ -4,17 +4,29 @@
 static Window *window;
 static TextLayer *heading_layer;
 static TextLayer *text_layer;
+static GFont word_font;
+static GFont title_font;
+static int x = 0;
+static char *str_arr[2] = {"Loading word 2...", "Loading word 3..."};
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
-  	text_layer_set_text(text_layer, "Select");
+	
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
-  	text_layer_set_text(text_layer, "Up");
+  	if (x < 0) {
+		x++;
+		text_layer_set_text(text_layer, *str_arr[abs(x)]);
+	}
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
- 	 text_layer_set_text(text_layer, "Down");
+ 	 x--;
+	if (x < -2) {
+		text_layer_set_text(text_layer, "Come back again tomorrow for more words!");
+	} else if (x > -3 && x < 1) {
+		text_layer_set_text(text_layer, *str_arr[x]);
+	}
 }
 
 static void click_config_provider(void *context) {
@@ -26,16 +38,14 @@ static void click_config_provider(void *context) {
 static void window_load(Window *window) {
   	Layer *window_layer = window_get_root_layer(window);
   	GRect bounds = layer_get_bounds(window_layer);
-	heading_layer = text_layer_create((GRect) {
-		.origin = {10, 40},
-		.size = { bounds.size.w, 10}
-	});
-  	text_layer = text_layer_create((GRect) { 
-  		.origin = { 20, 140 }, 
-		.size = { bounds.size.w, 20 } 
-	});
+	heading_layer = text_layer_create(GRect(20, 5, 100, 100));
+  	text_layer = text_layer_create(GRect(22, 80, 100, 60));
+	title_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
+	word_font = fonts_get_system_font(FONT_KEY_GOTHIC_18);
+	text_layer_set_font(heading_layer, title_font);
+	text_layer_set_font(text_layer, word_font);
   	text_layer_set_text(heading_layer, "Word of the Day");
-	text_layer_set_font(heading_layer, GOTHIC_24_BOLD);
+	text_layer_set_text(text_layer, "Loading...");
 	text_layer_set_text_alignment(text_layer, GTextAlignmentCenter);
   	text_layer_set_text_alignment(heading_layer, GTextAlignmentCenter);
   	layer_add_child(window_layer, text_layer_get_layer(heading_layer));

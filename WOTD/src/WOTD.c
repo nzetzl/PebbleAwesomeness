@@ -52,7 +52,7 @@ static void window_load(Window *window) {
   	Layer *window_layer = window_get_root_layer(window);
   	GRect bounds = layer_get_bounds(window_layer);
 	heading_layer = text_layer_create(GRect(20, 5, 100, 100));
-  	text_layer = text_layer_create(GRect(5, 55, 135, 80));
+  	text_layer = text_layer_create(GRect(22, 80, 100, 60));
 	title_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD);
 	word_font = fonts_get_system_font(FONT_KEY_GOTHIC_18);
 	text_layer_set_font(heading_layer, title_font);

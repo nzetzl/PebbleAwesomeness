@@ -11,8 +11,12 @@
     "resources": {
         "media": []
     },
-    "sdkVersion": "2",
+    "sdkVersion": "3",
     "shortName": "WOTD",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
     "uuid": "2d8825ad-faa2-4d61-8368-74e849b28f95",
     "versionCode": 1,
     "versionLabel": "1.0",

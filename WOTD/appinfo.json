@@ -14,8 +14,14 @@
                 "type": "png"
             },
             {
+                "compatibility": "2.7",
                 "file": "fonts/perfect-dos-vga.ttf",
-                "name": "FONT_PERFECT_DOS_18",
+                "name": "FONT_PERFECT_DOS_25",
+                "type": "font"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "FONT_PERFECT_DOS_15",
                 "type": "font"
             },
             {
@@ -25,13 +31,7 @@
             },
             {
                 "file": "fonts/perfect-dos-vga.ttf",
-                "name": "FONT_PERFECT_DOS_15",
-                "type": "font"
-            },
-            {
-                "compatibility": "2.7",
-                "file": "fonts/perfect-dos-vga.ttf",
-                "name": "FONT_PERFECT_DOS_25",
+                "name": "FONT_PERFECT_DOS_28",
                 "type": "font"
             }
         ]

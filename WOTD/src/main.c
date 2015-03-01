@@ -63,16 +63,16 @@ static void main_window_load(Window *window) {
    //fonts_get_system_font(FONT_KEY_GOTHIC_24); 
     
         // Create def TextLayer
-   s_def_layer = text_layer_create(GRect(5, 60, 139, 50));
+   s_def_layer = text_layer_create(GRect(5, 55, 139, 50));
     text_layer_set_background_color(s_def_layer, GColorBlack);
   text_layer_set_text_color(s_def_layer, GColorClear);
   text_layer_set_text(s_def_layer, "(n.) a sign, design, or figure that identifies or represents something");
     
   
   //Create GFont
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_25));
+  s_time_font = fonts_get_system_font(FONT_KEY_BITHAM_30_BLACK);
 s_word_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_15));
-    s_main_font = fonts_get_system_font(FONT_KEY_GOTHIC_24_BOLD); ;
+    s_main_font = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
         s_def_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_15));
   //Apply to TextLayer
   text_layer_set_font(s_time_layer, s_time_font);

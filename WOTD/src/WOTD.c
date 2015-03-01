@@ -26,14 +26,8 @@ static void click_config_provider(void *context) {
 static void window_load(Window *window) {
   	Layer *window_layer = window_get_root_layer(window);
   	GRect bounds = layer_get_bounds(window_layer);
-	heading_layer = text_layer_create((GRect) {
-		.origin = {10, 40},
-		.size = { bounds.size.w, 10}
-	});
-  	text_layer = text_layer_create((GRect) { 
-  		.origin = { 20, 140 }, 
-		.size = { bounds.size.w, 20 } 
-	});
+	heading_layer = text_layer_create(GRect(5, 5, 50, 50));
+  	text_layer = text_layer_create(GRect(0, 100, 144, 25));
   	text_layer_set_text(heading_layer, "Word of the Day");
 	text_layer_set_font(heading_layer, GOTHIC_24_BOLD);
 	text_layer_set_text_alignment(text_layer, GTextAlignmentCenter);

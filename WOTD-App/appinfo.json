@@ -1,0 +1,22 @@
+{
+    "appKeys": {
+        "dummy": 0
+    },
+    "capabilities": [
+        ""
+    ],
+    "companyName": "MakeAwesomeHappen",
+    "longName": "WOTD",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "2",
+    "shortName": "WOTD",
+    "uuid": "2d8825ad-faa2-4d61-8368-74e849b28f95",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}

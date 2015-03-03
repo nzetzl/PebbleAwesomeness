@@ -1,2 +1,2 @@
-# PebbleAwesomeness
-An awesome pebble app of some kind(to be decided)
+#PebbleAwesomeness
+This is the project we developed during HackIllinois. The project consists of a watchface and an app for the pebble smartwatch. Both do basically the same thing, but have different ways of presenting the information. Both show a new word of the day each day and its definition. The difference in the app is that you can also go back to view previous words of the day. The watchface only displays the current word of the day.
